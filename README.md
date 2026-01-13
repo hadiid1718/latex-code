@@ -1,6 +1,8 @@
 # Resume – Hadeed Ul Hassan
 
 This repository contains my resume written in LaTeX.
+Add the Icons in contact Section.
+Set a proper ATS formatting.
 
 ## Build
 Compile using:

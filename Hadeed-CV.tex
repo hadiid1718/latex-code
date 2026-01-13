@@ -1,122 +1,147 @@
 \documentclass[11pt,a4paper]{article}
 
-\usepackage[left=1.2cm,right=1.2cm,top=1.2cm,bottom=1.2cm]{geometry}
+% ------------------ PACKAGES ------------------
+\usepackage[left=1.5cm,right=1.5cm,top=1.3cm,bottom=1.3cm]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{mathptmx}
 
-\definecolor{primary}{HTML}{0A66C2}
+% ------------------ COLORS ------------------
+\definecolor{heading}{HTML}{000000}
 
+% ------------------ HYPERREF ------------------
 \hypersetup{
     hidelinks
 }
 
+% ------------------ SECTION FORMAT ------------------
 \titleformat{\section}
-  {\large\bfseries\color{primary}}
+  {\bfseries\large\color{heading}}
   {}
   {0em}
-  {}[\titlerule]
+  {}
+  [\vspace{5pt}\titlerule]
 
-\setlist[itemize]{noitemsep, topsep=3pt}
+\titlespacing{\section}{0pt}{14pt}{8pt}
+
+% ------------------ LIST SETTINGS ------------------
+% All bullets slightly indented for alignment under headings
+\setlist[itemize]{
+    leftmargin=1.8cm,  % adjust to align with heading first word
+    labelsep=0.5em,
+    itemsep=4pt,
+    topsep=3pt
+}
+
 \pagenumbering{gobble}
 
 \begin{document}
 
 % ================= HEADER =================
 \begin{center}
-    {\LARGE \textbf{Hadeed Ul Hassan}} \\[4pt]
-    Islamabad, Pakistan \\
-    \href{mailto:hadeed.hassan189@gmail.com}{hadeed.hassan189@gmail.com} \ | 
-    0326-9908189 \\
-    \href{https://pro-hadi.netlify.app}{Portfolio} \ | 
-    \href{https://www.linkedin.com/in/hadeed-ul-hassan-b91453376}{LinkedIn} \ | 
-    \href{https://github.com/hadiid1718}{GitHub}
+    {\LARGE \textsc{Hadeed Ul Hassan}} \\[6pt]
+    Islamabad, Pakistan
 \end{center}
 
-% ================= PROFILE =================
-\section*{Profile}
-Frontend-focused Full-Stack Web Developer with hands-on experience in building responsive and interactive web applications using React.js and modern UI frameworks. Skilled in converting UI/UX designs into reusable components, managing application state, and integrating REST APIs. Comfortable working across the stack with Node.js and Express, with a strong focus on clean code, performance, and real-world usability.
+\vspace{-6pt}
+
+% ================= CONTACT =================
+\begin{center}
+\small
+\faEnvelope\ \href{mailto:hadeed.hassan189@gmail.com}{hadeed.hassan189@gmail.com}
+\quad $\vert$ \quad
+\faPhone\ +92 326 9908189
+\quad $\vert$ \quad
+\faGlobe\ \href{https://pro-hadi.netlify.app}{Portfolio}
+\quad $\vert$ \quad
+\faLinkedin\ \href{https://www.linkedin.com/in/hadeed-ul-hassan-b91453376}{LinkedIn}
+\quad $\vert$ \quad
+\faGithub\ \href{https://github.com/hadiid1718}{GitHub}
+\end{center}
+
+\vspace{-10pt}
 
 % ================= EDUCATION =================
 \section*{Education}
-\textbf{Quaid-i-Azam University (QAU), Islamabad} \\
-Bachelor of Science in Information Technology (BSIT) \hfill \textit{2022 -- 2026}
 
-\textbf{Relevant Coursework:}  
-Web Programming, Database Management Systems, Advanced Web Engineering, Software Engineering
+\textbf{Quaid-i-Azam University} \hfill \textit{Sep. 2022 -- June 2026} \\ 
+\hangindent=0.6cm  \textit{Bachelor of Science in Information Technology (BSIT)} \hfill \textit{Islamabad, Pakistan} \\
+
+\textbf{Relevant Coursework:} \\
+\hangindent=.66cm Web Programming, Database Management Systems, Advanced Web Engineering, Software Engineering
+
+% ================= PROFESSIONAL SUMMARY =================
+\section*{Professional Summary}
+\hangindent=0.6cm Full-Stack Web Developer with hands-on experience building scalable and maintainable web applications using the MERN stack and PHP. Skilled in developing responsive React-based user interfaces, designing robust backend systems, and integrating RESTful APIs. Strong understanding of database design, authentication, and performance optimization, with a practical focus on clean code and real-world problem solving.
+
+% ================= CORE RESPONSIBILITIES =================
+\section*{Core Responsibilities}
+\begin{itemize}
+    \item Develped full-stack web applications using React.js, Node.js, Express.js, PHP, and modern JavaScript (ES6+).
+    \item Build responsive and reusable UI components while ensuring cross-browser and mobile compatibility.
+    \item Design and implement RESTful APIs to support frontend functionality and external integrations.
+    \item Manage application state and client-side data flow using Redux Toolkit and Context API.
+    \item Implement authentication, authorization, and protected routes using JWT and session-based methods.
+    \item Design, query, and maintain databases using MongoDB and MySQL.
+    \item Handle server-side validation, error handling, and business logic.
+    \item Optimize frontend rendering and backend performance through refactoring and efficient queries.
+    \item Debug, test, and maintain existing codebases to ensure stability and scalability.
+\end{itemize}
 
 % ================= EXPERIENCE =================
 \section*{Experience}
-\textbf{Web Development Intern (Remote)} \hfill \textit{July 2025 -- Sept 2025} \\
-\textit{Jaynex IT, Lahore}
+\textbf{Jaynex IT} \hfill \textit{July 2025 -- Sept 2025} \\
+\hangindent=0.6cm\textit{Web Development Intern} \hfill  \textit{Lahore, Pakistan} \\
 \begin{itemize}
-    \item Developed frontend components using React and Tailwind CSS based on provided UI designs.
-    \item Integrated REST APIs and handled client-side state management.
-    \item Improved page responsiveness and reduced unnecessary re-renders through component refactoring.
+   \item Developed React-based UI components aligned with provided UI/UX designs.
+   \item Built and consumed REST APIs for frontend-backend integration.
+   \item Worked with MongoDB and MySQL for data storage and retrieval.
+   \item Improved application responsiveness and optimized API performance.
 \end{itemize}
 
-% ================= PROJECTS =================
-\section*{Projects}
+% ================= RELEVANT WORK =================
+\section*{Relevant Work}
 
 \textbf{Universal File Converter \& Compressor}
 \begin{itemize}
     \item Developed a full-stack web application allowing users to upload, convert, and compress files.
-    \item Designed a React-based interface with clear file status feedback and error handling.
-    \item Implemented backend routes for secure file processing and cleanup.
-    \item Improved file handling flow, reducing failed uploads during testing.
-    \item \textbf{Tech:} React.js, Tailwind CSS, Node.js, Express.js, MongoDB
+    \item Built a React-based interface with progress indicators, validation, and error handling.
+    \item Implemented secure backend APIs for file processing and automatic cleanup.
+    \item \textbf{Tech:} React.js, Node.js, Express.js, MongoDB, Tailwind CSS
 \end{itemize}
 
 \textbf{Departmental Voting System}
 \begin{itemize}
-    \item Built a secure web-based voting system for departmental use.
-    \item Implemented role-based authentication and protected routes using JWT.
-    \item Designed a real-time results view with automatic vote counting.
-    \item Reduced manual result compilation by automating vote aggregation.
-    \item \textbf{Tech:} React.js, Express.js, MongoDB, JWT
+    \item Built a secure voting platform with role-based access control.
+    \item Implemented JWT authentication and protected backend routes.
+    \item Designed a real-time results interface with automated vote aggregation.
+    \item \textbf{Tech:} React.js, Node.js, Express.js, MongoDB
 \end{itemize}
 
 \textbf{Shades — UI Design Agency Platform}
 \begin{itemize}
-    \item Created a visually rich frontend website to showcase design templates and agency work.
-    \item Built reusable React components and applied smooth UI animations.
-    \item Ensured mobile-first responsiveness across all screen sizes.
+    \item Developed a modern frontend website showcasing creative design work.
+    \item Created reusable components and implemented smooth UI animations.
     \item \textbf{Tech:} React.js, Tailwind CSS, Framer Motion
-\end{itemize}
-
-\textbf{Upwork Automation Tool}
-\begin{itemize}
-    \item Developed a backend service to fetch and filter job listings based on keywords.
-    \item Implemented preference-based filtering to reduce irrelevant job results.
-    \item Automated repetitive job-search tasks for improved efficiency.
-    \item \textbf{Tech:} Node.js, Express.js, MongoDB, Axios
-\end{itemize}
-
-\textbf{Bank Statement Converter}
-\begin{itemize}
-    \item Built a backend utility to convert raw bank statements into structured formats.
-    \item Parsed multiple input formats and generated CSV/JSON outputs.
-    \item Simplified data preparation for analysis tasks.
-    \item \textbf{Tech:} Node.js, Express.js, SQL/MySQL
 \end{itemize}
 
 \textbf{Airbnb Clone}
 \begin{itemize}
-    \item Developed a full-stack clone featuring property listings and booking functionality.
-    \item Designed React components for search filters and booking views.
-    \item Integrated Stripe for secure payment handling.
+    \item Developed a full-stack clone with property listings, booking workflows, and payments.
+    \item Implemented backend APIs and integrated Stripe payment gateway.
     \item \textbf{Tech:} React.js, Node.js, Express.js, MongoDB, Stripe
 \end{itemize}
 
-% ================= SKILLS =================
+% ================= TECHNICAL SKILLS =================
 \section*{Technical Skills}
 
-\textbf{Frontend:} React.js, JavaScript (ES6+), HTML, CSS, Tailwind CSS, Bootstrap, Material UI, Shadcn UI \\
-\textbf{State Management:} Redux Toolkit, Context API \\
-\textbf{Backend:} Node.js, Express.js, REST APIs, JWT \\
-\textbf{Databases:} MongoDB, SQL, MySQL \\
-\textbf{Tools \& Services:} Git, GitHub, Stripe, Cloudinary \\
-\textbf{Concepts:} Component-Based Architecture, Responsive Design, SPA Development, API Integration
+\hangindent=0.6cm \textbf{Frontend:} React.js, JavaScript (ES6+), HTML, CSS,  \\ 
+\textbf{Libraries:} Tailwind CSS, Bootstrap, Material UI, Shadcn UI \\
+\textbf{Backend:} Node.js, Express.js, PHP, REST APIs, JWT \\
+\textbf{Databases:} MongoDB, MySQL, SQL \\
+\textbf{Tools \& Concepts:} Git, GitHub, MVC Architecture, Authentication, API Integration, Responsive Design
 
 \end{document}
